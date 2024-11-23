@@ -1,0 +1,791 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face{
+    font-family: "poppins";
+    src: url(../Poppins/Poppins-Bold.ttf);
+}
+nav{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    margin-inline: auto;
+    height: 14vh;
+    gap: 100px;
+    border-bottom: solid rgba(184, 184, 184, 0.596) 1px;
+    position: fixed;
+    background-color: white;
+    z-index: 20;
+}
+img{
+    height: 80px;
+    width: 80px;
+    /* margin-left: -50px; */
+}
+.nav ul{
+    display: flex;
+    justify-content: space-around;
+    margin-inline: auto;
+    width: 100%;
+    gap: 35px;
+}
+.nav ul li{
+    list-style-type: none;
+    gap: 10px;
+}
+.nav ul li a{
+    text-decoration: none;
+    font-size: 0.8em;
+    color: black;
+    text-decoration: solid;
+    color: rgb(7, 61, 209);
+    font-family: 'poppins';
+}
+.nav ul li a:hover{
+    color: rgb(105, 105, 207);
+}
+i{
+    font-size: 0.8em;
+    color: rgb(7, 61, 209);
+}
+.about{
+background-color: none;
+height: 290px;
+display: none;
+position: absolute;
+top: 50px;
+/* color: black; */
+/* border: solid red medium; */
+width: 200px;
+z-index: 10;
+}
+.aboutdropdown{
+    /* display: none; */
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.534);
+    padding: 30px;
+    /* margin-top: ; */
+    border-top: solid medium blue;
+    top: 39px;
+    width: 230px;
+    line-height: 12px;
+    box-shadow: 2px 2px 9px 1px rgb(202, 202, 202);
+    animation-name: drop;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-duration: .5s;
+}
+.aboutdropdown li a strong{
+    /* padding: 10px; */
+    color: rgba(0, 0, 0, 0.747);
+    font-size: 1.1em;
+    width: 100%;
+    display: block;
+    padding: 15px;
+}
+.nav ul li:hover .about{
+    display: block;
+    /* background-color: rgba(48, 44, 44, 0.034); */
+    /* padding: 10px 10px 10px 30px; */
+}
+.aboutdropdown li a strong:hover{
+    background-color: rgba(48, 44, 44, 0.034);
+    /* padding: 10px 10px 10px 0px; */
+}
+.programme{
+    background-color: none;
+    height: 290px;
+    display: none;
+    position: absolute;
+    top: 50px;
+    color: black;
+    /* border: solid red medium; */
+    width: 250px;
+    z-index: 10;
+}
+.programmedropdown{
+    /* display: none; */
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.541);
+    padding: 20px 25px;
+    border-top: solid medium blue;
+    top: 39px;
+    width: 240px;
+    line-height: 10px;
+    box-shadow: 2px 2px 9px 1px rgb(202, 202, 202);
+    animation-name: drop;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-duration: .5s;
+}
+.programmedropdown li a strong{
+    /* padding: 10px; */
+    color: rgba(0, 0, 0, 0.753);
+    font-size: 1.05em;
+    width: 100%;
+    display: block;
+    padding: 15px;
+    line-height: 15px;
+}
+.nav ul li:hover .programme{
+    display: block;
+}
+.programmedropdown li a strong:hover{
+    background-color: rgba(48, 44, 44, 0.034);
+}
+.admission{
+    background-color: none;
+    height: 250px;
+    display: none;
+    position: absolute;
+    top: 50px;
+    color: black;
+    /* border: solid red medium; */
+    width: 250px;
+    z-index: 10;
+}
+.admissiondropdown{
+    /* display: none; */
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.527);
+    padding: 20px 25px;
+    border-top: solid medium blue;
+    top: 39px;
+    width: 220px;
+    /* line-height: 220px; */
+    box-shadow: 2px 2px 9px 1px rgb(202, 202, 202);
+    animation-name: drop;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-duration: .5s;
+}
+.admissiondropdown li a strong{
+    /* padding: 10px; */
+    color: rgba(0, 0, 0, 0.753);
+    font-size: 1.05em;
+    width: 100%;
+    display: block;
+    padding: 15px;
+    line-height: 15px;
+}
+.nav ul li:hover .admission{
+    display: block;
+}
+.admissiondropdown li a strong:hover{
+    background-color: rgba(48, 44, 44, 0.034);
+}
+.E-Portal{
+    background-color: none;
+    height: 250px;
+    display: none;
+    position: absolute;
+    top: 50px;
+    color: black;
+    /* border: solid red medium; */
+    width: 250px;
+    z-index: 10;
+}
+.E-Portaldropdown{
+    /* display: none; */
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.527);
+    padding: 30px;
+    /* padding-top: 36px; */
+    /* margin-top: 50px; */
+    border-top: solid medium blue;
+    top: 39px;
+    width: 220px;
+    line-height: 13px;
+    box-shadow: 2px 2px 9px 1px rgb(202, 202, 202);
+    animation-name: drop;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-duration: .5s;
+}
+
+.E-Portaldropdown li a strong{
+    color: rgba(0, 0, 0, 0.747);
+    font-size: 1.1em;
+    /* padding: 20px; */
+    /* padding-top: 30px; */
+    width: 100%;
+    display: block;
+    padding: 10px 10px 10px 0px;
+}
+.nav ul li:hover .E-Portal{
+    display: block;
+}
+.E-Portaldropdown li a strong:hover{
+    background-color: rgba(48, 44, 44, 0.034);
+    padding: 10px 10px 10px 0px;
+}
+@keyframes drop{
+    from{
+        transform: scaleY(0.9);
+    }
+    to{
+        transform: scaleY(1); 
+    }
+}
+.socialsidebar{
+    position: fixed;
+    display: block;
+    top: 300px;
+}
+/* .fa-linkedin{
+    font-size: 5em;
+    color: rgb(255, 253, 253);
+    position: fixed;
+    background-color: blue;
+    height: 50px;
+    width: 50px;
+    z-index: 1000;
+} */
+
+.herosection{
+    background-color: rgba(247, 237, 223, 0.11);
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    perspective: 1000px;
+}
+.main{
+    width: 80%;
+    display: flex;
+    margin-inline: auto;
+    align-items: center;
+    justify-content: space-between;
+    height: 70vh;
+    gap: 60px;
+    padding-top: 170px;
+    /* position: absolute; */
+}
+.leftside{
+    flex: 1;
+    padding-top: 55px;
+}
+.leftside h1{
+    font-size: 4rem;
+    font-family: 'poppins';
+    line-height: 70px;
+    font-weight: 8000px;
+    color: rgb(1, 1, 70);
+    /* position: absolute; */
+}
+.leftside p{
+    font-family: 'poppins';
+    color: rgb(47, 48, 53);
+    line-height:30px;
+   /* position: absolute; */
+}
+.leftside a{
+   padding: 15px 25px;
+    font-family: 'poppins';
+    color: white;
+    background-color: rgb(17, 17, 139);
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    position: absolute;
+   
+}
+.leftside i{
+    font-size: 0.9em;
+    color: rgb(255, 255, 255);
+   
+}
+.icon{
+    display: none;
+    z-index: 100;
+    position: absolute;
+    top: 15px;
+    left: 100px;
+    animation-name: icon1;
+    animation-timing-function:ease-out;
+    /* animation-iteration-count: ; */
+    animation-duration: 1s;
+}
+@keyframes icon1{
+    from{
+       transform: translate(0px);
+    }
+    to{
+        transform: translate(10px); 
+    }
+}
+.leftside a:hover .icon{
+    display: block;
+}
+.flex1 .icon{
+    top: 5px;
+   
+}
+.flex1 i{
+    color: black;
+}
+.flex1 a:hover .icon{
+    display: block;
+}
+.rightside{
+    padding-top: 80px;
+    flex: 1;
+}
+.rightside img{
+    height: 80vh;
+    width: 100%;
+}
+
+.section2{
+    width: 80%;
+    margin-inline: auto;
+    /* margin: 0px 107.5px; */
+        padding: 43px 0px;
+}
+.section2 h2{
+    font-size: 3rem;
+    font-family: 'poppins';
+    color: rgb(1, 1, 70);
+}
+.flex1{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 21.5px 0px;
+    width: 100%;
+    gap: 50px;
+}
+.fleximage{
+    width: 100%;
+    height: 350px;
+    filter: grayscale(1);
+}
+.flex1 h3{
+    font-family: 'poppins';
+    padding: 10px 0px 10px 0px;
+    color: rgb(1, 1, 70);
+    font-size: 1.3em;
+    text-align:left;
+}
+.flex1 p{
+    font-family: 'poppins';
+    color: rgba(43, 40, 40, 0.938);
+    font-size: 0.85em;
+    line-height: 1.6em;
+    padding-bottom: 30px;
+    word-wrap: break-word;
+}
+.flex1 a{
+    text-transform: none;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.753);
+    font-family: 'poppins';
+    position: absolute;
+    padding-bottom: 10px;
+    border-bottom: solid 2px rgb(4, 4, 46);
+}
+.flex2{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 21.5px 0px 21.5px 0px;
+    width: 100%;
+    gap: 50px;
+    margin-top: 50px;
+}
+.flex2 strong{
+    font-family: 'poppins';
+    line-height: 1.4em;
+}
+.flex2 p{
+    font-family: 'poppins';
+    font-size: 1.05em;
+    word-wrap: break-word;
+    line-height: 1.6em;
+    border-bottom: rgb(6, 167, 159) solid 1px;
+    padding-top: 30px;
+    color: rgba(0, 0, 0, 0.63);
+}
+#Nationalcourses{
+    width: 35%;
+    /* background-color: black; */
+    text-wrap: wrap;
+    text-indent: initial;
+}
+#alumni{
+    border: none;
+}
+.section3{
+    position: relative;
+    padding-top: 43px;
+    width: 100%;
+    font-family: 'poppins';
+}
+.firstrow{
+    position: relative;
+    width: 80%;
+    padding: 20px 0px;
+    margin-inline: auto;
+}
+.firstrow h2{
+    color: rgba(0, 0, 0, 0.815);
+    font-size: 3em;
+}
+.firstrow p{
+    color: rgba(0, 0, 0, 0.63);
+    font-size: 1em;
+    padding-bottom: 10px;
+}
+.firstrow a{
+    color: rgb(17, 17, 139);
+    /* position: absolute; */
+}
+.firstrow a .icon{
+    display: block;
+    z-index: 10000;
+    position: absolute;
+    top: 127px;
+    left: 150px;
+}
+.firstrow a{
+    transition: all 1s ease-in-out;
+}
+.firstrow a:hover{
+    color: orange;
+    background-color: white;
+    border-radius: 10px;
+    animation-iteration-count: 1;
+    animation-duration: .5s;
+}
+.firstrow a .icon .fa{
+    color: rgba(0, 0, 0, 0.767);
+}@keyframes learn{
+    from{
+        transform: scaleY(0.9);
+    }
+    to{
+        transform: scaleY(1); 
+    }
+}
+
+.secondrow{
+    position: relative;
+    display: flex;
+    width: 80%;
+    justify-content: space-around;
+    margin-inline: auto;
+    font-family: 'poppins';
+    padding: 20px 0px;
+    gap: 50px;
+}
+.software{
+    width: 70%;
+    background-color:rgba(136,196,221,0.35);
+    padding: 60px;
+    border-radius: 30px;
+    box-shadow: 0px 60px 80px 0px rgba(0, 135, 28, 0.2);
+}
+.software img{
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+}
+.software h3{
+    font-size: 1.7em;
+    padding: 10px 0px;
+}
+.software p{
+    font-size: 0.9em;
+    text-align: justify;
+}
+.software a{
+    color: rgb(9, 9, 109);
+    transition: all 1s ease-in-out;
+    
+}
+.software a:hover{
+    color: orange;
+    background-color: white;
+    border-radius: 10px;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-duration: .5s;
+}
+.software a .icon{
+    display: block;
+    z-index: 10000;
+    position: absolute;
+    top: 660px;
+    left: 170px;
+}
+.software a .icon .fa{
+    color: rgba(0, 0, 0, 0.767);
+    font-size: 0.7em;
+}
+
+.datascience{
+    margin-top: -100px;
+    background-color: #eeefbd;
+    box-shadow: 0px 60px 80px 0px rgba(254, 139, 119, 0.3);
+    padding: 60px;
+    width: 70%;
+    border-radius: 30px;
+    border: black solid thin;
+    margin-bottom: 100px;
+}
+.datascience img{
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+}
+.datascience h3{
+    font-size: 1.7em;
+    padding: 10px 0px;
+}
+.datascience p{
+    font-size: 0.9em;
+    text-align: justify;
+}
+.datascience a {
+    color: rgb(9, 9, 109);
+    transition: all 1s ease-in-out;
+}
+.datascience a:hover{
+    color: orange;
+    background-color: white;
+    border-radius: 10px;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-duration: .5s;
+}
+.datascience a .icon{
+    display: block;
+    z-index: 10000;
+    position: absolute;
+    top: 520px;
+    left: 730px;
+}
+.datascience a .icon .fa{
+    color: rgba(0, 0, 0, 0.767);
+    font-size: .7em;
+}
+
+.thirdrow{
+    position: relative;
+    display: flex;
+    width: 80%;
+    justify-content: space-around;
+    margin-inline: auto;
+    font-family: 'poppins';
+    padding: 20px 0px;
+    gap: 50px;
+}
+.uiux{
+    width: 70%;
+    background-color:#e0d5c0;
+    padding: 60px;
+    border-radius: 30px;
+    box-shadow: 0px 60px 80px 0px rgba(0, 135, 28, 0.2);
+    margin-bottom: 50px;
+}
+.uiux img{
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+}
+.uiux h3{
+    font-size: 1.7em;
+    padding: 10px 0px;
+}
+.uiux p{
+    font-size: 0.9em;
+    line-height: 1.5em;
+    text-align: justify;
+}
+.uiux a{
+    color: rgb(9, 9, 109);
+    transition: all 1s ease-in-out;
+}
+.uiux a:hover{
+    color: orange;
+    background-color: white;
+    border-radius: 10px;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-duration: .5s;
+}
+.uiux a .icon{
+    display: block;
+    z-index: 100;
+    position: absolute;
+    top: 670px;
+    left: 170px;
+}
+.uiux a .icon .fa{
+    color: rgba(0, 0, 0, 0.767);
+    font-size: 0.7em;
+}
+
+.digital{
+    margin-top: -100px;
+    background-color: #dfd5e8;
+    box-shadow: 0px 60px 80px 0px rgba(254, 139, 119, 0.3);
+    padding: 60px;
+    width: 70%;
+    border-radius: 30px;
+    border: black solid thin;
+    margin-bottom: 100px;
+}
+.digital img{
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+}
+.digital h3{
+    font-size: 1.7em;
+    padding: 10px 0px;
+}
+.digital p{
+    font-size: 0.9em;
+    text-align: justify;
+}
+.digital a {
+    color: rgb(9, 9, 109);
+    transition: all 1s ease-in-out;
+}
+.digital a:hover{
+    color: orange;
+    background-color: white;
+    border-radius: 10px;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-duration: .5s;
+}
+.digital a .icon{
+    display: block;
+    z-index: 100;
+    position: absolute;
+    top: 645px;
+    left: 730px;
+}
+.digital a .icon .fa{
+    color: rgba(0, 0, 0, 0.767);
+    font-size: .7em;
+}
+.section4{
+    position: relative;
+    padding: 100px 0px;
+}
+.title{
+    width: 80%;
+    margin-inline: auto;
+    padding: 50px 0px;
+}
+.title h2{
+    font-family: 'poppins';
+    padding-bottom: 10px;
+    width: 45%;
+    color: rgba(0, 0, 0, 0.795);
+    word-spacing: 1px;
+    /* font-size: 1.5em; */
+
+}
+.section4 img{
+    width: 180px;
+}
+.row1{
+    width: 80%;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    /* position: relative; */
+    padding: 20px;
+}
+.row2{
+    width: 80%;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    padding: 20px;
+}
+.row3{
+    width: 80%;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    padding: 20px;
+}
+
+
+
+.bodybody{
+    display: flex;
+    width: 100%;
+    height: 70vh;
+    background-image: linear-gradient(120deg, rgba(0, 4, 66, 0) 0%, #000442 70%), url(https://edu.sqi.ng/wp-content/uploads/2020/08/DSC_9054-scaled.jpg);
+    background-position-y: -300px;
+    background-size: cover;
+    justify-content: space-around;
+    gap: 50px;
+    margin-inline: auto;
+    padding: 50px;
+    padding-top: 60px;
+}
+.video{
+    padding: 0px 20px 0px 10px;
+}
+iframe{
+    border-radius: 20px;
+}
+.content{
+    padding: 10px 20px 0px 0px;
+    text-align: justify;
+    width: 90%;
+    padding-right: 100px;
+}
+.content h1{
+    color: white;
+    font-size: 3em;
+    font-weight: bold;
+    line-height: 30px;
+    font-family: 'poppins';
+}
+.content p{
+    color: white;
+    font-size: 1.05em;
+    line-height: 32px;
+    font-family: 'poppins';
+}
+.content a{
+    height: 50px;
+    padding: 15px 25px;
+    width: 120px;
+    background-color: rgb(6, 6, 134);
+    border-radius: 50px;
+    border: none;
+    color: white;
+    font-size: .95em;
+    box-shadow: 1px 1px 20px 0.5px rgba(0, 0, 0, 0.068);
+    font-family: 'poppins';
+    text-decoration: none;
+}
+.content a .icon{
+    position: absolute;
+    display: none;
+    z-index: 1;
+    position: absolute;
+    top: 5053px;
+    left: 630px;
+}
+.content a .icon i{
+    font-size: .9em;
+    color: white;
+}
+.content a:hover .icon{
+    display: block;
+}
